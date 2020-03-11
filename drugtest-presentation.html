@@ -14,25 +14,6 @@
         <link rel="stylesheet" href="lib/css/monokai.css">
 
         <style>
-            .ipo-block span {
-                display: block;
-                width: 250px;
-                border: 1px solid red;
-                margin: 0 auto;
-            }
-            .second .ipo-block span {
-                width: 100%;
-                transition-property: width;
-                transition-duration: 0.5s;
-                transition-timing-function: ease-in;
-            }
-            .ipo-block div.up {
-                transform: translateY(-16px);
-            }
-            .ipo-block div.down {
-                transform: translateY(50px);
-            }
-            
             .ipo-block {
               position: relative;
             }
@@ -49,12 +30,26 @@
               text-align: center;
             }
 
+            .ipo-block span {
+                display: block;
+                width: 250px;
+                border: 1px solid red;
+                margin: 0 auto;
+            }
+            
             .ipo-block div:last-child {
               left: auto;
               right: 50%;
               transform: translateX(50%);
             }
 
+            .second .ipo-block span {
+                width: 100%;
+                transition-property: width;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in;
+            }
+            
             .blah .ipo-block div {
               opacity: 1;
             }
