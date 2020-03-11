@@ -23,7 +23,7 @@
             .second .ipo-block span {
                 width: 100%;
                 transition-property: width;
-                transition-duration: 0.p5s;
+                transition-duration: 0.5s;
                 transition-timing-function: ease-in;
             }
             .ipo-block div.up {
@@ -32,6 +32,43 @@
             .ipo-block div.down {
                 transform: translateY(50px);
             }
+            
+            .ipo-block {
+              position: relative;
+            }
+
+            .ipo-block div {
+              position: absolute;
+              opacity: 0.1;
+              transition: 2s;
+              transition-property: all;
+              transition-duration: 2s;
+              left: 50%;
+              transform: translatex(-50%);
+              width: 150px;
+              text-align: center;
+            }
+
+            .ipo-block div:last-child {
+              left: auto;
+              right: 50%;
+              transform: translateX(50%);
+            }
+
+            .blah .ipo-block div {
+              opacity: 1;
+            }
+
+            .blah .ipo-block div:first-child {
+              left: 0;
+              transform: translateX(0);
+            }
+
+            .blah .ipo-block div:last-child {
+              right: 0;
+              transform: translateX(0);
+            }
+
         </style>
         <!-- Printing and PDF exports -->
         <script>
@@ -52,7 +89,12 @@
                 </section>
                 <section class="ipo-block" data-state="second" data-transition="none">
                     <div><span>Input</span></div>
-                    <div><span>Process</span></div>
+                    <div><span>Processing</span></div>
+                    <div><span>Output</span></div>
+                </section>
+                <section class="ipo-block" data-state="blah" data-transition="none">
+                    <div><span>Input</span></div>
+                    <div><span>Processing</span></div>
                     <div><span>Output</span></div>
                 </section>
                 <section>Slide 1</section>
